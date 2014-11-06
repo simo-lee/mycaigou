@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<dubbo:reference id="businessCardService" interface="com.mysoft.b2b.user.business.api.BusinessCardService" />
+	<dubbo:reference id="userService" interface="com.mysoft.b2b.uuc.api.UserService" check="false"/>
+	<dubbo:reference id="onlineService" interface="com.mysoft.b2b.sso.api.OnlineService" check="false"/>
+	<dubbo:reference id="dictionaryService" interface="com.mysoft.b2b.basicsystem.settings.api.DictionaryService" check="false"/>
+	<dubbo:reference id="basicCategoryService" interface="com.mysoft.b2b.bizsupport.api.BasicCategoryService" check="false"/>
+	<dubbo:reference id="mySupplierService" interface="com.mysoft.b2b.developer.api.MySupplierService" check="false"/>
+	<dubbo:reference id="qualificationService" interface="com.mysoft.b2b.bizsupport.api.QualificationService" check="false"/>
+	<dubbo:reference id="qualificationLevelService" interface="com.mysoft.b2b.bizsupport.api.QualificationLevelService" check="false"/>
+	<dubbo:reference id="domainService" interface="com.mysoft.b2b.bizsupport.api.DomainService" check="false"/>
+	<!-- 消息服务 -->
+	<dubbo:reference id="messageCenterService" interface="com.mysoft.b2b.bizsupport.api.MessageCenterService" check="false"/>
+	
+	<dubbo:reference id="browseSupplierService" interface="com.mysoft.b2b.developer.api.BrowseSupplierService" check="false"/>
+	<dubbo:reference id="supplierStatService" interface="com.mysoft.b2b.datacenter.useranalysis.SupplierStatService" check="false"/>
+	<dubbo:reference id="supplierManagerService" interface="com.mysoft.b2b.supplier.api.SupplierManagerService" check="false"/>
+	<dubbo:reference id="supplierDataService" interface="com.mysoft.b2b.supplier.api.SupplierDataService" check="false"/>
+	<dubbo:reference id="supplierService" interface="com.mysoft.b2b.supplier.api.SupplierService" check="false"/>
+	<dubbo:reference id="productService" interface="com.mysoft.b2b.supplier.api.ProductService" check="false"/>
+	<dubbo:reference id="supplierDocumentService" interface="com.mysoft.b2b.supplier.api.SupplierDocumentService" check="false"/>
+	
+	<!--公司简介 服务接口  -->
+	<dubbo:reference id="supplierIntroductionService" interface="com.mysoft.b2b.supplier.api.SupplierIntroductionService" check="false"/>
+	
+	
+</beans>
